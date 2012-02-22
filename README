@@ -46,7 +46,7 @@ END USE EXAMPLE
 
 
 ------------------------------------------------------------------------------------------------
-Serial-To-USB-Android Interface
+Serial-To-USB Interface
 ------------------------------------------------------------------------------------------------
 public interface ISerialPort {
     public abstract void open()throws SerialPortException;
