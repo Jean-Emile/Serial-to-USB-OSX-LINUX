@@ -2,64 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68bc6a69-3ef6-4a21-b945-12397628cfc8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/SerialPort/ISerialPort.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/eu.powet.rxtx.SerialUSB.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/.dep/Wireless_Bootloader_ATmega328.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.eep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.elf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.hex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.lss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/bootloaders/ATmega328P/Wireless_Bootloader_ATmega328.sym" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/flash/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/flash/flash.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/flash/flash.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/flash/test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/flash/test.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/.dep/test.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.eep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.elf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.hex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.lss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/FlashOvertheair/program_test/test.sym" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/utils/semaphore.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/utils/semaphore.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/c/utils/utils.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Flash/FlashFirmware.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Flash/FlashFirmwareEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Flash/FlashFirmwareEventListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Flash/FoaAbstract.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Utils/KHelpers.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/FlashEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/FlashJNA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/nix32/flash.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/nix64/flash.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/osx/flash.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/org/kevoree/extra/kserial/ContentListener.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/org/kevoree/extra/kserial/KevoreeSharedCom.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/org/kevoree/extra/kserial/Tester.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/org/kevoree/extra/kserial/TwoWayActors.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/eu.powet.rxtx.SerialUSB.iml" afterPath="$PROJECT_DIR$/eu.powet.SerialUSB.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Port.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/CommPort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/c/serialposix/serialposix.c" afterPath="$PROJECT_DIR$/src/main/c/serialposix/serialposix.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/SerialPort/SerialPort.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/SerialPort/SerialPort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/SerialPort/SerialPortEvent.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/SerialPort/SerialPortEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Test.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/NativeLoader.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/NativeLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/SerialEvent.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/SerialEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/SerialPortJNA.java" afterPath="$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/jna/SerialPortJNA.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eu.powet.SerialUSB.iml" afterPath="" />
     </list>
     <ignored path="eu.powet.rxtx.SerialUSB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -117,10 +60,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="45" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+            <state line="24" column="68" selection-start="519" selection-end="519" vertical-scroll-proportion="0.36144578">
               <folding />
             </state>
           </provider>
@@ -137,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="65" selection-start="809" selection-end="809" vertical-scroll-proportion="0.30120483">
+            <state line="20" column="65" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -637,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="45" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/CommPort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="11" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
@@ -669,7 +605,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="65" selection-start="809" selection-end="809" vertical-scroll-proportion="0.30120483">
+        <state line="20" column="65" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/powet/SerialUSB/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="68" selection-start="519" selection-end="519" vertical-scroll-proportion="0.36144578">
           <folding />
         </state>
       </provider>

@@ -1,0 +1,23 @@
+   System.out.println(SerialPort.getPortIdentifiers());
+
+
+        final SerialPort serial = new SerialPort("/dev/ttyACM0", 115200);
+        serial.open();
+
+
+        serial.addEventListener(new SerialPortEventListener() {
+            public void incomingDataEvent(SerialPortEvent evt)
+            {
+                System.out.println("event=" + evt.getSize() + "/" + new String(evt.read()));
+            }
+
+            public void disconnectionEvent(SerialPortDisconnectionEvent evt)
+            {
+                System.out.println("device " + serial.getPort_name() + " is not connected anymore ");
+
+                try {
+                    serial.autoReconnect(20, this);
+                } catch (SerialPortException e) {
+                }
+            }
+        });
