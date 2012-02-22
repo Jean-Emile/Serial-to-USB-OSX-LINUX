@@ -16,20 +16,16 @@ import java.util.EventObject;
 
 public class SerialPortEvent extends EventObject  implements SerialEvent {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
     private int sizefifo= 1024;
     private	ByteFIFO fifo_in = new ByteFIFO(sizefifo);
     private SerialPort serialPort;
-    private int pthreadid;
-    private int monitorid;
+    private int pthreadid=0;
+    private int monitorid=0;
 
     public SerialPortEvent(SerialPort serialport) throws SerialPortException {
         super(serialport);
         this.serialPort = serialport;
-
 
         NativeLoader.getINSTANCE_SerialPort().register_SerialEvent(this);
 

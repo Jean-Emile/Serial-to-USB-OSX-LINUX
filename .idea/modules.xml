@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/eu.powet.SerialUSB.iml" filepath="$PROJECT_DIR$/eu.powet.SerialUSB.iml" />
       <module fileurl="file://$PROJECT_DIR$/eu.powet.rxtx.SerialUSB.iml" filepath="$PROJECT_DIR$/eu.powet.rxtx.SerialUSB.iml" />
     </modules>
   </component>

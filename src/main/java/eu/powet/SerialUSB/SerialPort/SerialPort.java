@@ -2,11 +2,14 @@ package eu.powet.SerialUSB.SerialPort;
 
 import com.sun.jna.Memory;
 import com.sun.jna.ptr.PointerByReference;
-import eu.powet.SerialUSB.CommPort;
 import eu.powet.SerialUSB.Constants;
+import eu.powet.SerialUSB.CommPort;
 import eu.powet.SerialUSB.Utils.ByteFIFO;
-import eu.powet.SerialUSB.Utils.KHelpers;
 import eu.powet.SerialUSB.jna.NativeLoader;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -41,8 +44,35 @@ public class SerialPort extends CommPort {
         listenerList.remove(SerialPortEventListener.class, listener);
     }
 
+    public static List<String> getPortIdentifiers() {
+        ArrayList<String> ports = new ArrayList<String>();
+        File file = new File("/dev");
+        File[] files = file.listFiles();
+        if (files != null) {
+            for (int i = 0; i < files.length; i++)
+            {
+                if (files[i].isDirectory() == false)
+                {
+                    if(files[i].getName().startsWith("tty") || files[i].getName().startsWith("cu"))
+                    {
+                        if(files[i].getName().contains("USB") || files[i].getName().contains("usb") || files[i].getName().contains("AC") )
+                        {
+                            String device_name =   "/dev/"+files[i].getName();
+                            if(eu.powet.SerialUSB.jna.NativeLoader.getINSTANCE_SerialPort().verify_fd(device_name) == 0)
+                            {
+                                ports.add(device_name);
+                            }
+                        }
+                    }
+                }
 
-    void fireSerialEvent (SerialPortEvent evt) {
+            }
+        }
+        return ports;
+    }
+
+
+    public void fireSerialEvent (SerialPortEvent evt) {
         Object[] listeners = listenerList.getListenerList();
         for (int i = 0; i < listeners.length; i += 2) {
             if (listeners[i] == SerialPortEventListener.class) {
@@ -81,19 +111,13 @@ public class SerialPort extends CommPort {
 
     }
 
-    /*
-    @Override
-    public byte[] read() throws SerialPortException {
-        return new byte[0];
-    }*/
-
     @Override
     public void open () throws SerialPortException {
         setFd(NativeLoader.getINSTANCE_SerialPort().open_serial(this.getPort_name(), this.getPort_bitrate()));
 
         if (getFd() < 0) {
             NativeLoader.getINSTANCE_SerialPort().close_serial(getFd());
-            throw new SerialPortException(this.getPort_name()+"- [" + getFd() + "] " + Constants.messages.get(getFd())+" Ports : "+ KHelpers.getPortIdentifiers());
+            throw new SerialPortException(this.getPort_name()+"- [" + getFd() + "] " + Constants.messages.get(getFd())+" Ports : "+ getPortIdentifiers());
         }
         else
         {
