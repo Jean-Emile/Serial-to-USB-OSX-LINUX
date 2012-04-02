@@ -14,12 +14,16 @@
 #include <termios.h>
 #include <unistd.h>
 #include <sys/select.h>
+#include "../utils/utils.h"
 #include "serialposix.h"
 #include <dirent.h>
 
 
 #define _POSIX_SOURCE 1 /* POSIX compliant source */
-#define BUFFER_SIZE 1024
+
+#define BUFFER_SIZE 512
+//#define PROC_BASE  "/dev/"
+
 static int quitter=0;
 
 
@@ -36,6 +40,67 @@ int register_SerialEvent( void* fn){
 	SerialEvent=fn;
 	return 0;
 };
+
+/*
+Port* scan_fd(void)
+{
+	DIR *dir;
+	struct dirent *de;
+	char path[PATH_MAX+1];
+	pid_t pid;
+	int empty;
+	struct stat sb;
+	if (!(dir = opendir(PROC_BASE)))
+	{
+		perror(PROC_BASE);
+		return NULL;
+	}
+	empty = 0;
+	char name[PATH_MAX+1];
+
+
+	static Port myports[MAX_PORTS];
+	int i;
+	for(i=0;i<MAX_PORTS;i++)
+	{
+		memset(myports[i].devicename,0,sizeof(myports[i].devicename));
+	}
+	while ( ( de = readdir(dir) ) )
+	{
+
+		// /dev/cu.*     /dev/cu.usbserial-XXXXX
+		// /dev/tty.*    dev/tty.usbserial-XXXXX
+		// dev/ttyUSB*
+		// dev/ttyAC*
+		if(de->d_name[0] == 't' && de->d_name[1] == 't' && de->d_name[2] == 'y' || de->d_name[0] == 'c' && de->d_name[1] == 'u' )
+		{
+			sprintf(name,"%s%s",PROC_BASE,de->d_name);
+			if (stat(name,&sb) >= 0) {
+				switch (sb.st_mode & S_IFMT) {
+				case S_IFCHR:
+
+					if(de->d_name[3] == 'U' || de->d_name[3] == '.' || de->d_name[3] == 'A')
+					{
+						strcpy(myports[empty].devicename,de->d_name);
+						empty++;
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	closedir(dir);
+
+	if (empty == 0)
+	{
+		return myports;
+		//fprintf(stderr,PROC_BASE " is empty (not mounted ?)\n");
+
+	}
+	return &myports[0];
+}
+*/
 
 /**
  *  Write a byte on the fd
@@ -146,6 +211,7 @@ void *serial_monitoring(char *devicename)
 		if(verify_fd(name) == -1)
 		{
 			SerialEvent(-1,"WTF 42 \n");
+		    pthread_exit(NULL);
 		}
 	}
 	pthread_exit(NULL);
@@ -168,7 +234,6 @@ void *serial_reader(int fd)
 		}
 
 	}
-	printf("reader exit\n");
 	pthread_exit(NULL);
 }
 
@@ -178,7 +243,13 @@ void *serial_reader(int fd)
  */
 int reader_serial(int fd){
 	pthread_t lecture;
-	return  pthread_create (& lecture, NULL,&serial_reader, fd);
+	if(quitter == 0)
+	{
+		return  pthread_create (& lecture, NULL,&serial_reader, fd);
+	} else {
+
+	return 0;
+	}
 
 }
 
